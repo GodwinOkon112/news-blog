@@ -1,0 +1,358 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+html{
+    font-size: 10px;
+}
+
+/* basic styles */
+img {
+   min-height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.container {
+  width: 90vw;
+  min-height: 100vh;
+  padding-block: 2rem;
+  margin: 0 auto;
+}
+
+.contained{
+  width: 90vw;
+}
+
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5rem;
+  margin-bottom: 3rem;
+}
+
+ul {
+  display: flex;
+  gap: 2rem;
+}
+
+ul li a {
+  font-size: 1.5rem;
+  color: gray;
+  transition: .5;
+}
+
+ul li a:hover {
+  color: hsl(5, 85%, 63%);
+}
+
+.opener{
+  display: none;
+}
+
+main {
+  display: grid;
+  max-width: 100%;
+  grid-template-columns: repeat(7, 32.4%);
+  gap: 1.5rem;
+  grid-template-areas:
+    'one one four'
+    'two three four'
+    'five six seven';
+}
+
+.one {
+  grid-area: one;
+}
+.two {
+  grid-area: two;
+  min-height: 100%
+}
+.three {
+  grid-area: three;
+}
+.four {
+  grid-area: four;
+}
+.five {
+  grid-area: five;
+  margin-top: 2rem;
+}
+.six {
+  grid-area: six;
+  margin-top: 2rem;
+}
+.seven {
+  grid-area: seven;
+  margin-top: 2rem;
+}
+
+/* main styles */
+.bright-col h1 {
+  font-size: 4rem;
+  color: hsl(240, 100%, 5%);
+  line-height: 4.5rem;
+  text-align: left;
+  font-weight: bolder;
+
+}
+
+.readmore-col {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: flex-start;
+  gap: 3rem;
+}
+
+.readmore-col p {
+  font-size: 1.8rem;
+  width: 100%;
+  color: gray;
+}
+
+.readmore-col .btn {
+  width: 50%;
+  background-color: hsl(5, 85%, 63%);
+  text-align: center;
+  padding-block: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.readmore-col .btn:hover {
+  background-color: hsl(240, 100%, 5%);
+  color:white ;
+
+}
+
+.new-col {
+  background-color: hsl(240, 100%, 5%);
+  min-height: 100%;
+  color: white;
+  padding-inline: 2rem;
+  padding-block: 1rem;
+}
+
+.new-col h2 {
+  font-size: 3.6rem;
+  color: hsl(35, 77%, 62%);
+  padding-top: 1.5rem;
+}
+.trending-message {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-top: 3rem;
+}
+
+.hydrogen,
+.downsides {
+  padding-bottom: 4rem;
+  border-bottom: 0.5px solid gray;
+}
+
+.hydrogen h3,
+.downsides h3,
+.vc-funding h3 {
+  font-size: 1.5rem;
+  width: 90%;
+  padding-bottom: 1rem;
+  transition: .5s;
+  color: white;
+  cursor: pointer;
+}
+
+.hydrogen h3:hover,
+.downsides h3:hover,
+.vc-funding h3:hover {
+  color: hsl(35, 77%, 62%);
+
+}
+
+.hydrogen p,
+.downsides p,
+.vc-funding p {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: gray;
+}
+
+/* footer content */
+.retro-pc,
+.gaming,
+.top-laptops {
+  display: flex;
+ 
+}
+
+.retro-pc img,
+.gaming img,
+.top-laptops img {
+    width: 80%;
+}
+
+.text {
+  padding-top: 1.5rem;
+  width: 100%;
+}
+.text h3 {
+  font-size: 2rem;
+  padding-bottom: 0.5rem;
+  color: hsl(5, 85%, 63%);
+}
+
+.text h5 {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  padding-bottom: 0.8rem;
+  cursor: pointer;
+}
+
+.text h5:hover{
+  color: hsl(5, 85%, 63%);
+
+}
+
+.text p {
+  font-size: 1.5rem;
+  color: gray;
+  width: 90%;
+}
+
+
+
+
+
+/* for small screen phones and tablet */
+
+@media screen and (max-width: 800px) {
+
+  .opener{
+    display: flex;
+    font-size: 250%;
+  }
+
+  .logo{
+    width: 10%;
+  }
+
+    html{
+    font-size: 9px;
+}
+
+ .one img{
+    min-height: 400px;
+    object-fit: cover;
+    max-width: 100%;
+} 
+
+
+nav{
+  background-color: white;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+  main {
+    display: block;
+  }
+
+  ul {
+    display: none;
+  }
+
+  .bright-col h1 {
+  font-size: 4rem;
+  line-height: 4.5rem;
+  margin-block: 2rem;
+}
+
+
+.readmore-col .btn {
+  font-size: 1.5rem;
+
+}
+.new-col {
+  margin-block: 2rem;
+}
+
+.new-col h2 {
+  font-size: 2.6rem;
+  padding-top: 1rem;
+}
+.trending-message {
+  gap: 1.5rem;
+  padding-block: 1.5rem;
+}
+
+.hydrogen,
+.downsides {
+  padding-bottom: 2rem;
+}
+
+.hydrogen h3,
+.downsides h3,
+.vc-funding h3 {
+  font-size: 1.8rem;
+  padding-bottom: .5rem;
+}
+
+.hydrogen p,
+.downsides p,
+.vc-funding p {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+
+.retro-pc,
+.gaming,
+.top-laptops {
+  display: flex;
+  gap: 1rem;
+}
+
+.retro-pc img,
+.gaming img,
+.top-laptops img {
+    max-height: 30vh;
+    width: 90%;
+}
+
+.text {
+  padding-top: 1.5rem;
+  width: 80%;
+}
+.text h3 {
+  font-size: 2.5rem;
+  padding-bottom: 0.5rem;
+  color: hsl(5, 85%, 63%);
+}
+
+.text h5 {
+  font-size: 1.7rem;
+  font-weight: bolder;
+  padding-bottom: 0.8rem;
+}
+
+.text p {
+  font-size: 1.5rem;
+  color: gray;
+  width: 70%;
+}
+
+
+} 
+
+
+
+
+
